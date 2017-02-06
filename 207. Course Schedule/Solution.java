@@ -57,7 +57,7 @@ public class Solution {
                 if(!dfs(graph,visited,(int)graph[course].get(i)))
                     return false;
             }
-            visited[course] = false;
+            visited[course] = false;//only veiry whether there is a cirle in its own connection zone 
             return true;
         }
 }//dfs
