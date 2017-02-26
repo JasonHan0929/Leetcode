@@ -1,0 +1,28 @@
+    public static int airport(int[] arr, int[]dep, int flights) {
+        TreeMap<Integer, Integer> tree = new TreeMap<>();
+        for (int time : dep)
+            tree.put(time, -1);
+        for (int time : arr)
+            tree.put(time, +1);
+        int result = 0;
+        int sum = 0;
+        for (Integer key : tree.keySet()) {
+            sum += tree.get(key);
+            result = Math.max(sum, result);
+        }
+        return result;
+    }
+    public static int matchingPair(String input) {
+        Deque<Character> stack = new LinkedList<>();
+        int index = -1;
+        for (int i = 0; i < input.length(); i++) {
+            char temp = input.charAt(i);
+            if (!stack.isEmpty() && stack.peek() == temp - 32) {
+                stack.pop();
+                index = i;
+            }
+            else
+                stack.push(temp);
+        }
+        return index;
+    }
