@@ -23,3 +23,23 @@ public class Solution {
     }
     
 }
+
+/*
+public class Solution {
+    public List<String> generateParenthesis(int n) {
+        List<String> result = new ArrayList<>();
+        backtracking(result, "", 0, 0, n);
+        return result;
+    }
+    public void backtracking(List<String> result, String temp, int leftNum, int rightNum, int n) {
+        if (rightNum == leftNum && leftNum == n) {
+            result.add(temp);
+        } else {
+            if (leftNum > rightNum)
+                backtracking(result, temp + ")", leftNum, rightNum + 1, n);
+            if (leftNum < n)
+                backtracking(result, temp + "(", leftNum + 1, rightNum, n);
+        }
+    }
+}//second time
+*/

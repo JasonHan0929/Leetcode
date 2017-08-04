@@ -7,12 +7,12 @@ public class Solution {
             mid = low + (high - low) / 2;
             if (mid > 0 && nums[mid] < nums[mid - 1])
                 return nums[mid];
-            if (nums[mid] >= low && nums[mid] > nums[high])
+            if (nums[mid] >= low && nums[mid] > nums[high])//[2,1], nums[mid] > nums[high] is used when there only has one element in [low, high]
                 low = mid + 1;
             else 
                 high = mid - 1;
         }
-        return nums[0];
+        return nums[low];
     }
 }
 /*
@@ -42,3 +42,23 @@ public class Solution {
     }
 }
 */
+
+
+/*
+public class Solution {
+    public int findMin(int[] nums) {
+        int low = 0;
+        int high = nums.length - 1;
+        int mid = 0;
+        while (low < high) {
+            mid = low + (high - low) / 2;
+            if (nums[mid] > nums[high])//[2,1]
+                low = mid + 1;
+            else 
+                high = mid;
+        }
+        return nums[high];
+    }
+}//revised from II
+*/
+

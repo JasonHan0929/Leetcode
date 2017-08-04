@@ -18,6 +18,7 @@ public class Solution {
     }
 }
 
+/*
 public int findMin(int[] nums) {
 	 int l = 0, r = nums.length-1;
 	 while (l < r) {
@@ -32,3 +33,4 @@ public int findMin(int[] nums) {
 	 }
 	 return nums[l];
 }// more simple
+*/

@@ -59,7 +59,7 @@ public class Try{
     }
     public static Node findManager(Node root, String name1, String name2) {
         if (root.member.size() == 0 || root.name.equals(name1) || root.name.equals(name2))
-            return root;
+            return root;//root.member.size() == 0 could not be replaced by root == null
         List<Node> list = new LinkedList<>();
         for (Node node : root.member) {
             Node temp = findManager(node, name1, name2);

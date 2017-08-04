@@ -28,3 +28,36 @@ public class Solution {
         return dummy.next;
     }
 }
+
+/*
+public class Solution {
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists.length == 0)
+            return  null;
+        PriorityQueue<Integer> heap = new PriorityQueue<>();
+        ListNode dummy = new ListNode(-1);
+        ListNode cur = dummy;
+        for (ListNode head : lists) {
+            if (head != null)
+                heap.offer(head.val);
+        }
+        while (!heap.isEmpty()) {
+            int min = heap.poll();
+            for (int i = 0; i < lists.length; i++) {
+                if (lists[i] != null && lists[i].val == min) {
+                    cur.next = lists[i];
+                    cur = cur.next;
+                    if (lists[i].next != null) {
+                        lists[i] = lists[i].next;
+                        heap.offer(lists[i].val);
+                    } else
+                        lists[i] = null;//otherwise will have unlimited loop
+                    break;
+                }
+            }
+        }
+        cur.next = null;
+        return dummy.next;
+    }
+}//time limit exceeded
+*/
