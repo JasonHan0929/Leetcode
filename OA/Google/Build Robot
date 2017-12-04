@@ -1,0 +1,9 @@
+Build robot: you are given a list of parts of the robot, and for each part, you also have a list of parts needed to be finished before building this one. Find out in what order you can finish building the robot, and output that as a list.
+. more info on 1point3acres.com
+Class Part {
+   int id;
+   ArrayList<Part> dependencies;
+}
+
+LC Course Schedule II
+GFG topological sort
