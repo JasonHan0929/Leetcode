@@ -18,8 +18,6 @@ class Solution {
             }
         }
         if (prices[prices.length - 1] > prices[prices.length - 2]) end.add(prices.length - 1);
-        System.out.println(start);
-        System.out.println(end);
         return total;
     }
-}
+} // also find the points when transactions happen
